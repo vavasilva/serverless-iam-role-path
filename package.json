@@ -1,6 +1,6 @@
 {
   "name": "serverless-iam-role-path",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Serverless plugin to add IAM role paths",
   "main": "src/index.js",
   "scripts": {

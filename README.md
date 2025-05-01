@@ -72,8 +72,36 @@ The plugin will:
 
 | Option | Description |
 |--------|-------------|
+| `custom.iamRolePath` | Default path as a simple string (e.g., `"/my-path/"`) for all IAM roles |
 | `custom.iamRolePath.path` | Default path to assign to all IAM roles (must start and end with a forward slash) |
-| `functions.[name].iamRolePath` | Function-specific path to override the default path (must start and end with a forward slash) |
+| `custom.iamRolePath.skipDefaultRole` | Set to `true` to skip applying the path to the default `IamRoleLambdaExecution` role |
+| `functions.[name].iamRolePath` | Function-specific path as a simple string to override the default path |
+| `functions.[name].iamRolePath.path` | Function-specific path defined as an object to override the default path |
+
+### Alternative Configuration Formats
+
+You can use a simplified format for both global and function-specific paths:
+
+```yaml
+custom:
+  iamRolePath: '/my-path/'  # Simple string format
+
+functions:
+  hello:
+    handler: handler.hello
+    iamRolePath: '/function-specific-path/'  # Simple string format
+```
+
+### Skip Default Role
+
+If you're experiencing permission issues during deployment, you can skip applying the path to the default role:
+
+```yaml
+custom:
+  iamRolePath:
+    path: '/my-path/'
+    skipDefaultRole: true
+```
 
 ## Notes
 

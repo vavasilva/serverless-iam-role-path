@@ -17,6 +17,10 @@
     "serverless": "^3.40.0",
     "serverless-iam-roles-per-function": ">=3.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vavasilva/serverless-iam-role-path"
+  },
   "author": "",
   "license": "MIT"
 }

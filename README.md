@@ -5,7 +5,11 @@ A Serverless Framework plugin that adds support for IAM role paths to functions 
 ## Installation
 
 ```bash
+# NPM
 npm install --save-dev serverless-iam-role-path
+
+# Or using the Serverless Framework plugin command
+serverless plugin install -n serverless-iam-role-path
 ```
 
 ## Requirements
